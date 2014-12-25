@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="124-so-JRH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="124-so-JRH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -33,7 +34,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecordingAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HWl-ms-MWF"/>
-                                    <segue destination="sgx-rS-a9v" kind="show" id="ZEj-rI-Nzq"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaK-AD-ZJt">
@@ -59,12 +59,12 @@
                                 <exclude reference="HaK-AD-ZJt"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Oa7-MD-0OK"/>
-                                <exclude reference="tg2-Gp-FqN"/>
+                                <exclude reference="Bdj-kS-ymJ"/>
                                 <exclude reference="fw4-lg-3Af"/>
                                 <exclude reference="oZN-Uq-aPe"/>
+                                <exclude reference="Oa7-MD-0OK"/>
+                                <exclude reference="tg2-Gp-FqN"/>
                                 <exclude reference="BQj-tC-2uz"/>
-                                <exclude reference="Bdj-kS-ymJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -74,12 +74,12 @@
                                 <include reference="HaK-AD-ZJt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Oa7-MD-0OK"/>
-                                <include reference="tg2-Gp-FqN"/>
+                                <include reference="Bdj-kS-ymJ"/>
                                 <include reference="fw4-lg-3Af"/>
                                 <include reference="oZN-Uq-aPe"/>
+                                <include reference="Oa7-MD-0OK"/>
+                                <include reference="tg2-Gp-FqN"/>
                                 <include reference="BQj-tC-2uz"/>
-                                <include reference="Bdj-kS-ymJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -88,11 +88,12 @@
                         <outlet property="recordButton" destination="CgX-VO-hgF" id="lFj-t9-A1k"/>
                         <outlet property="recordingInProgress" destination="HaK-AD-ZJt" id="IGA-lD-kZc"/>
                         <outlet property="stopButton" destination="b4L-z4-ibR" id="8Qe-I3-kO0"/>
+                        <segue destination="sgx-rS-a9v" kind="show" identifier="stopRecording" id="uMV-Vi-OS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357.5" y="285"/>
+            <point key="canvasLocation" x="1362" y="285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BQp-kS-96x">
@@ -168,12 +169,12 @@
                                 <exclude reference="Zz6-5i-QDu"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Nmd-OQ-ZDx"/>
-                                <exclude reference="u8G-dA-ueR"/>
+                                <exclude reference="hnV-nM-3Fe"/>
                                 <exclude reference="0Mo-xC-MR0"/>
                                 <exclude reference="ULd-W9-pBV"/>
                                 <exclude reference="LOl-VI-4xt"/>
-                                <exclude reference="hnV-nM-3Fe"/>
+                                <exclude reference="Nmd-OQ-ZDx"/>
+                                <exclude reference="u8G-dA-ueR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -183,12 +184,12 @@
                                 <include reference="Zz6-5i-QDu"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Nmd-OQ-ZDx"/>
-                                <include reference="u8G-dA-ueR"/>
+                                <include reference="hnV-nM-3Fe"/>
                                 <include reference="0Mo-xC-MR0"/>
                                 <include reference="ULd-W9-pBV"/>
                                 <include reference="LOl-VI-4xt"/>
-                                <include reference="hnV-nM-3Fe"/>
+                                <include reference="Nmd-OQ-ZDx"/>
+                                <include reference="u8G-dA-ueR"/>
                             </mask>
                         </variation>
                     </view>
