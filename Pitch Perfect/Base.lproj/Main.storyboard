@@ -147,6 +147,9 @@
                                 <state key="normal" image="Stop Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopAudio:" destination="sgx-rS-a9v" eventType="touchUpInside" id="HjP-A1-U5n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
