@@ -152,29 +152,57 @@
                                     <action selector="stopAudio:" destination="sgx-rS-a9v" eventType="touchUpInside" id="HjP-A1-U5n"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-WQ-qiE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Chipmunk Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="sgx-rS-a9v" eventType="touchUpInside" id="0Ng-Q2-93t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk9-Gl-0XB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Darth Vader Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthVaderAudio:" destination="sgx-rS-a9v" eventType="touchUpInside" id="VuY-0G-qrI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Vn4-QF-i8i" secondAttribute="trailing" constant="40" id="0Mo-xC-MR0"/>
                             <constraint firstAttribute="centerX" secondItem="Zz6-5i-QDu" secondAttribute="centerX" constant="4" id="LOl-VI-4xt"/>
                             <constraint firstItem="eWl-Y1-daG" firstAttribute="leading" secondItem="5oO-nN-sOO" secondAttribute="leadingMargin" constant="40" id="Nmd-OQ-ZDx"/>
+                            <constraint firstItem="AZZ-WQ-qiE" firstAttribute="top" secondItem="eWl-Y1-daG" secondAttribute="bottom" constant="100" id="PcZ-hV-tBC"/>
+                            <constraint firstItem="AZZ-WQ-qiE" firstAttribute="leading" secondItem="5oO-nN-sOO" secondAttribute="leadingMargin" constant="40" id="QpO-Ef-1TO"/>
                             <constraint firstItem="Vn4-QF-i8i" firstAttribute="top" secondItem="rzQ-GZ-jDB" secondAttribute="bottom" constant="42" id="ULd-W9-pBV"/>
+                            <constraint firstItem="Uk9-Gl-0XB" firstAttribute="top" secondItem="Vn4-QF-i8i" secondAttribute="bottom" constant="100" id="bS6-iZ-LvO"/>
                             <constraint firstItem="h6d-TL-hHH" firstAttribute="top" secondItem="Zz6-5i-QDu" secondAttribute="bottom" constant="40" id="hnV-nM-3Fe"/>
                             <constraint firstItem="eWl-Y1-daG" firstAttribute="top" secondItem="rzQ-GZ-jDB" secondAttribute="bottom" constant="42" id="u8G-dA-ueR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uk9-Gl-0XB" secondAttribute="trailing" constant="40" id="woQ-WI-hfa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eWl-Y1-daG"/>
                                 <exclude reference="Vn4-QF-i8i"/>
                                 <exclude reference="Zz6-5i-QDu"/>
+                                <exclude reference="AZZ-WQ-qiE"/>
+                                <exclude reference="Uk9-Gl-0XB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="hnV-nM-3Fe"/>
-                                <exclude reference="0Mo-xC-MR0"/>
-                                <exclude reference="ULd-W9-pBV"/>
-                                <exclude reference="LOl-VI-4xt"/>
                                 <exclude reference="Nmd-OQ-ZDx"/>
                                 <exclude reference="u8G-dA-ueR"/>
+                                <exclude reference="0Mo-xC-MR0"/>
+                                <exclude reference="ULd-W9-pBV"/>
+                                <exclude reference="PcZ-hV-tBC"/>
+                                <exclude reference="QpO-Ef-1TO"/>
+                                <exclude reference="bS6-iZ-LvO"/>
+                                <exclude reference="woQ-WI-hfa"/>
+                                <exclude reference="LOl-VI-4xt"/>
+                                <exclude reference="hnV-nM-3Fe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -182,14 +210,20 @@
                                 <include reference="eWl-Y1-daG"/>
                                 <include reference="Vn4-QF-i8i"/>
                                 <include reference="Zz6-5i-QDu"/>
+                                <include reference="AZZ-WQ-qiE"/>
+                                <include reference="Uk9-Gl-0XB"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="hnV-nM-3Fe"/>
-                                <include reference="0Mo-xC-MR0"/>
-                                <include reference="ULd-W9-pBV"/>
-                                <include reference="LOl-VI-4xt"/>
                                 <include reference="Nmd-OQ-ZDx"/>
                                 <include reference="u8G-dA-ueR"/>
+                                <include reference="0Mo-xC-MR0"/>
+                                <include reference="ULd-W9-pBV"/>
+                                <include reference="PcZ-hV-tBC"/>
+                                <include reference="QpO-Ef-1TO"/>
+                                <include reference="bS6-iZ-LvO"/>
+                                <include reference="woQ-WI-hfa"/>
+                                <include reference="LOl-VI-4xt"/>
+                                <include reference="hnV-nM-3Fe"/>
                             </mask>
                         </variation>
                     </view>
@@ -198,8 +232,26 @@
             </objects>
             <point key="canvasLocation" x="2062.5" y="285"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="i8x-ug-n6D">
+            <objects>
+                <viewController id="b0d-ef-qTN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xBb-QM-Wg7"/>
+                        <viewControllerLayoutGuide type="bottom" id="IMw-HH-IM5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uqy-AJ-pkG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpK-Xt-czy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
+        <image name="Chipmunk Button" width="100" height="100"/>
+        <image name="Darth Vader Button" width="100" height="100"/>
         <image name="Fast Button" width="100" height="100"/>
         <image name="Microphone" width="100" height="100"/>
         <image name="Slow Button" width="100" height="100"/>
